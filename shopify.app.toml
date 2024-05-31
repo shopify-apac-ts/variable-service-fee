@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "3502b2367f49c18f952b9f200ba21324"
+name = "add-service-fee-on-card"
+handle = "add-service-fee-on-card"
+application_url = "https://rounds-hop-save-virgin.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "nobu-auction-payments.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://rounds-hop-save-virgin.trycloudflare.com/auth/callback",
+  "https://rounds-hop-save-virgin.trycloudflare.com/auth/shopify/callback",
+  "https://rounds-hop-save-virgin.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
